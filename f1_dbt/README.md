@@ -1,15 +1,22 @@
-Welcome to your new dbt project!
+# F1 Stats Pipeline
 
-### Using the starter project
+A personal data engineering project built to learn and demonstrate 
+a modern ELT stack using real Formula 1 data.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Stack
+- **Ingestion**: Python + requests → PostgreSQL
+- **Source**: Jolpica API (Ergast-compatible F1 data)
+- **Transformation**: dbt (staging + marts)
+- **Visualization**: Metabase (coming)
+- **Scheduling**: cron (coming)
 
+## Data
+Historical F1 data from 2000–2026 covering drivers, races and results 
+including sprint sessions.
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Progress
+- [x] Ingestion pipeline
+- [x] Staging models
+- [ ] Marts (fct_results)
+- [ ] Metabase dashboards
+- [ ] Scheduled runs for 2026 season
