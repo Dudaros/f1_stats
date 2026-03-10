@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: f1_raw
+    database: f1
+    schema: public
+    tables:
+      - name: drivers
+      - name: races
+      - name: results
